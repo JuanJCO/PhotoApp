@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAE9BE36C3BD5DB29E1C2F3B /* Pods_PhotoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D1D2C7B91B65A5C8B6D3E6 /* Pods_PhotoApp.framework */; };
 		E1624E6625F9977400408E9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E6525F9977400408E9A /* AppDelegate.swift */; };
 		E1624E6825F9977400408E9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E6725F9977400408E9A /* SceneDelegate.swift */; };
 		E1624E6A25F9977400408E9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1624E6925F9977400408E9A /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14CE4F825A9A994DDD48B921 /* Pods-PhotoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoApp/Pods-PhotoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		431A76F73E7781D769D18A3F /* Pods-PhotoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoApp.release.xcconfig"; path = "Target Support Files/Pods-PhotoApp/Pods-PhotoApp.release.xcconfig"; sourceTree = "<group>"; };
+		59D1D2C7B91B65A5C8B6D3E6 /* Pods_PhotoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1624E6225F9977400408E9A /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1624E6525F9977400408E9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1624E6725F9977400408E9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE9BE36C3BD5DB29E1C2F3B /* Pods_PhotoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B8C6EEA873CB375796E5EE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59D1D2C7B91B65A5C8B6D3E6 /* Pods_PhotoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D367007B14D4B340512584D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14CE4F825A9A994DDD48B921 /* Pods-PhotoApp.debug.xcconfig */,
+				431A76F73E7781D769D18A3F /* Pods-PhotoApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E1624E5925F9977400408E9A = {
 			isa = PBXGroup;
 			children = (
 				E1624E6425F9977400408E9A /* PhotoApp */,
 				E1624E6325F9977400408E9A /* Products */,
+				D367007B14D4B340512584D4 /* Pods */,
+				8B8C6EEA873CB375796E5EE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1624E7625F9977800408E9A /* Build configuration list for PBXNativeTarget "PhotoApp" */;
 			buildPhases = (
+				7422D0F6888A359693E476BC /* [CP] Check Pods Manifest.lock */,
 				E1624E5E25F9977400408E9A /* Sources */,
 				E1624E5F25F9977400408E9A /* Frameworks */,
 				E1624E6025F9977400408E9A /* Resources */,
+				589A9171E521E6AB48FCAFCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		589A9171E521E6AB48FCAFCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoApp/Pods-PhotoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoApp/Pods-PhotoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoApp/Pods-PhotoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7422D0F6888A359693E476BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1624E5E25F9977400408E9A /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		E1624E7725F9977800408E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CE4F825A9A994DDD48B921 /* Pods-PhotoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		E1624E7825F9977800408E9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 431A76F73E7781D769D18A3F /* Pods-PhotoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
